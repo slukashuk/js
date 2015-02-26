@@ -6,11 +6,11 @@ var fiveLetters = 0;
 var sixLetters = 0;
 var moreThen7Letters = 0;
 var wordStart = 0;
+var textWithoutPunctuation = text.replace(/.,;:/, "");
 
-
-while (counter < text.length){
-	var letter = text[counter];
-	if(letter == " " || counter == text.length - 1) {
+while (counter < textWithoutPunctuation.length){
+	var letter = textWithoutPunctuation[counter];
+	if(letter == " " || counter == textWithoutPunctuation.length - 1) {
 		var wordLength = counter - wordStart;
 		if (wordLength <=3){
 			less3Letters ++;
